@@ -3,11 +3,13 @@
     --white-color: #fff;
     --black-color: #000;
     --text-color: #333;
+    --text-color--blur: #aaa2a2;
     --border-color: #dbdbdb;
 
     --header-height: 120px;
     --navbar-height: 34px;
     --header-with-search-height: calc(var(--header-height) - var(--navbar-height));
+    --background-hover: #fafafa;
 }
 
 * {
@@ -21,6 +23,7 @@ html {
     box-sizing: border-box;
 }
 
+/* Responsive  */
 .grid {
     width: 1200px;
     max-width: 100%;
@@ -31,9 +34,25 @@ html {
     width: 100%;
 }
 
+/* Test  */
+
 .grid__row {
     display: flex;
     flex-wrap: wrap;
+    margin-right: 12px;
+    margin-left: 12px;
+}
+
+.grid__column-2 {
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 16.6667%;
+}
+
+.grid__column-10 {
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 83.3334%;
 }
 
 .mr-8 {
@@ -89,7 +108,7 @@ html {
 
 /* button style  */
 .btn {
-    min-width: 142px;
+    max-width: 142px;
     height: 34px;
     background-color: var(--white-color);
     text-decoration: none;
@@ -100,13 +119,14 @@ html {
     outline: none;
     cursor: pointer;
     color: var(--text-color);
-    display: flex;
+    display: inline-flex;
     justify-content: center;
     align-items: center;
 }
 
 .btn.btn--normal:hover {
     background-color: rgba(0, 0, 0, 0.05);
+    color: var(--text-color);
 }
 
 .btn--size-s {
@@ -114,7 +134,7 @@ html {
     padding: 0 8px;
 }
 
-.btn.btn-primary {
+.btn.btn--primary {
     color: var(--white-color);
     background-color: var(--primary-color);
 }
@@ -123,4 +143,17 @@ html {
     cursor: default;
     color: #949494;
     background: #c3c3c3;
+}
+
+/* selection  */
+.select-input {
+    position: relative;
+    height: 34px;
+    padding: 0 12px;
+    border-radius: 2px;
+    background-color: var(--white-color);
+    min-width: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
