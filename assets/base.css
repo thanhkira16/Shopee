@@ -66,6 +66,54 @@ html {
     margin-right: 8px;
 }
 
+/* pagination  */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pagination-item {
+    list-style: none;
+    margin: 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.pagination-item__link {
+    --height: 30px;
+    display: block;
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: #939393;
+    min-width: 40px;
+    height: var(--height);
+    text-align: center;
+    line-height: var(--height);
+    border-radius: 2px;
+}
+
+
+
+.pagination-item--active .pagination-item__link {
+    background-color: rgb(238, 77, 45);
+    color: var(--white-color);
+}
+
+.pagination-item--active .pagination-item__link:hover {
+    opacity: 0.8;
+}
+
+
+.pagination-item__icon {
+    font-size: 1.6rem;
+
+}
+
+
 @keyframes fadeIn {
     from {
         opacity: 0;
